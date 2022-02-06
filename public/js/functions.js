@@ -185,6 +185,8 @@ const formSubmit = function(htmlForm, className, insertFunction, getFunction, id
             createTable(products, document.querySelector('#listing'))
             // On delete button click.
             deleteItem(document.querySelectorAll('#listing .listing-item-actions .btn-danger'))
+            // On edit button click.
+            editItem(document.querySelectorAll('#listing .listing-item-actions .btn-warning'))
         })
     })
 }
