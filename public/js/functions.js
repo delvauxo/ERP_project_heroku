@@ -1,3 +1,8 @@
+// 
+// Global Variables.
+// 
+const domainName = 'https://erp-project-heroku.herokuapp.com'
+
 /**
  * Function - Fetch datas.
  * @param {String} url - URL of the API to fetch.
@@ -12,7 +17,7 @@
 * ASYNC Function - Get all products.
 */
 const getProducts = async function() {
-    const response = await fetch('https://erp-project-heroku.herokuapp.com/products')
+    const response = await fetch(domainName + '/products')
     if (response.ok) {
         const data = await response.json()
         return data
@@ -25,7 +30,7 @@ const getProducts = async function() {
 * ASYNC Function - Get all suppliers.
 */
 const getSuppliers = async function() {
-    const response = await fetch('https://erp-project-heroku.herokuapp.com/suppliers')
+    const response = await fetch(domainName + '/suppliers')
     if (response.ok) {
         const data = await response.json()
         return data
@@ -38,7 +43,7 @@ const getSuppliers = async function() {
 * ASYNC Function - Get all customers.
 */
 const getCustomers = async function() {
-    const response = await fetch('https://erp-project-heroku.herokuapp.com/customers')
+    const response = await fetch(domainName + '/customers')
     if (response.ok) {
         const data = await response.json()
         return data
@@ -52,7 +57,7 @@ const getCustomers = async function() {
  * @param {object} objectData - Object of datas.
  */
 const insertProduct = async function(objectData) {
-    const response = await fetch('https://erp-project-heroku.herokuapp.com/products', {
+    const response = await fetch(domainName + '/products', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -71,7 +76,7 @@ const insertProduct = async function(objectData) {
  * @param {object} objectData - Object of datas.
  */
 const insertSupplier = async function(objectData) {
-    const response = await fetch('https://erp-project-heroku.herokuapp.com/suppliers', {
+    const response = await fetch(domainName + '/suppliers', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -90,7 +95,7 @@ const insertSupplier = async function(objectData) {
  * @param {object} objectData - Object of datas.
  */
 const insertCustomer = async function(objectData) {
-    const response = await fetch('https://erp-project-heroku.herokuapp.com/customers', {
+    const response = await fetch(domainName + '/customers', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -188,9 +193,9 @@ const deleteItem = function(arrayDeleteBtns) {
             // Get ID of item to delete.
             const id = e.target.parentElement.parentElement.cells[0].innerHTML
             const page = document.querySelector('#btn-add').dataset.page + 's'
-            await fetch('https://erp-project-heroku.herokuapp.com/' + page + '/' + id, {method: 'DELETE'})
+            await fetch(domainName + '/' + page + '/' + id, {method: 'DELETE'})
             // Fetch new datas after item deleted.
-            const items  = await fetchDatas('https://erp-project-heroku.herokuapp.com/' + page, {method: 'GET'})
+            const items  = await fetchDatas(domainName + '/' + page, {method: 'GET'})
             // Reload listing with new data inserted after getting new listing with new product.
             createTable(items, document.querySelector('#listing'))
             // Recursive function for more than one delete action.
@@ -213,7 +218,7 @@ function createListingDatas(arrayLinks, inputSubmit) {
             // Hide Hero section.
             document.querySelector('#hero').classList.add('d-none')
             // Fetch datas from API.
-            const datas = await fetchDatas('https://erp-project-heroku.herokuapp.com/' + this.dataset.listing + 's')
+            const datas = await fetchDatas(domainName + '/' + this.dataset.listing + 's')
             // Create HTML products listing table.
             createTable(datas, document.querySelector('#listing'))
             // Add Listing title.
