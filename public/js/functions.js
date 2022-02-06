@@ -130,7 +130,7 @@ const editItem = function(arrayEditBtns) {
                     'Content-Type': 'application/json'
                 },
                 // body: JSON.stringify(objectData) from function params
-                body: {
+                body: JSON.stringify({
                     id: '',
                     name: 'edited name',
                     category: 'edited category',
@@ -139,7 +139,7 @@ const editItem = function(arrayEditBtns) {
                     price_sell: 'edited price_sell',
                     supplier: 'edited supplier',
                     price_supplier: 'edited price_supplier'
-                }
+                })
             })
             console.log(response)
         })
