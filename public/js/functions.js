@@ -115,10 +115,12 @@ const insertCustomer = async function(objectData) {
 * @param {Array} arrayEditBtns - Array of edit buttons.
 * @param {Object} objectData - Object of item datas.
 */
-const editItem = function(arrayEditBtns, objectData) {
+const editItem = function(arrayEditBtns) {
     // On edit button click.
     for (const btn of arrayEditBtns) {
+        console.log(arrayEditBtns)
         btn.addEventListener('click', async function(e) {
+            console.log('edit clicked')
             // Get ID of item to delete.
             const id = e.target.parentElement.parentElement.cells[0].innerHTML
             const page = document.querySelector('#btn-add').dataset.page + 's'
@@ -127,14 +129,22 @@ const editItem = function(arrayEditBtns, objectData) {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify(objectData)
+                // body: JSON.stringify(objectData) from function params
+                body: {
+                    id: '',
+                    name: 'edited name',
+                    category: 'edited category',
+                    origin: 'edited country',
+                    stock: 'edited stock',
+                    price_sell: 'edited price_sell',
+                    supplier: 'edited supplier',
+                    price_supplier: 'edited price_supplier'
+                }
             })
             console.log(response)
         })
     }
 }
-
-
 
 /**
  * Function - On form submit, insert new datas item in API database.
@@ -268,6 +278,8 @@ function createListingDatas(arrayLinks, inputSubmit) {
                     loadCountries(document.querySelector("#product-country"))
                 }
             })
+            // On edit button click.
+            editItem(document.querySelectorAll('#listing .listing-item-actions .btn-warning'))
             // On delete button click.
             deleteItem(document.querySelectorAll('#listing .listing-item-actions .btn-danger'))
         })
