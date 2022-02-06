@@ -109,9 +109,32 @@ const insertCustomer = async function(objectData) {
     }
 }
 
-// const deleteItem = function(itemID) {
+/**
+* 
+* @param {*} id 
+* @param {Array} arrayEditBtns - Array of edit buttons.
+* @param {Object} objectData - Object of item datas.
+*/
+const editItem = function(arrayEditBtns, objectData) {
+    // On edit button click.
+    for (const btn of arrayEditBtns) {
+        btn.addEventListener('click', async function(e) {
+            // Get ID of item to delete.
+            const id = e.target.parentElement.parentElement.cells[0].innerHTML
+            const page = document.querySelector('#btn-add').dataset.page + 's'
+            const response = await fetch(domainName + '/' + page + '/' + id, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(objectData)
+            })
+            console.log(response)
+        })
+    }
+}
 
-// }
+
 
 /**
  * Function - On form submit, insert new datas item in API database.
