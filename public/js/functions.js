@@ -243,6 +243,8 @@ const deleteItem = function(arrayDeleteBtns) {
             createTable(items, document.querySelector('#listing'))
             // Recursive function for more than one delete action.
             deleteItem(document.querySelectorAll('#listing .listing-item-actions .btn-danger'))
+            // On edit button click.
+            editItem(document.querySelectorAll('#listing .listing-item-actions .btn-warning'))
         })
     }
 }
