@@ -142,6 +142,8 @@ const formSubmit = function(htmlForm, className, insertFunction, getFunction, id
             const products  = await getFunction()
             // Reload listing with new data inserted after getting new listing with new product.
             createTable(products, document.querySelector('#listing'))
+            // On delete button click.
+            deleteItem(document.querySelectorAll('#listing .listing-item-actions .btn-danger'))
         })
     })
 }
