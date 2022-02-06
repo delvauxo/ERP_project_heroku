@@ -1,0 +1,44 @@
+<!-- Modal -->
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="customerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="customerModalLabel">Add a new customer :</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form import -->
+                <form id="form-customer" method="post" action="db.json">
+                    <!-- Id -->
+                    <input id="customer-id" type="hidden" name="id">
+                    <!-- First name -->
+                    <label for="customer-first-name">First name : </label><br>
+                    <input type="text" id="customer-first-name" name="first_name" required><br>
+                    <!-- Last name -->
+                    <label for="customer-last-name">Last name : </label><br>
+                    <input type="text" id="customer-last-name" name="last_name"><br>
+                    <!-- Age -->
+                    <label for="customer-age">Age : </label><br>
+                    <input type="text" id="customer-age" name="age"><br>
+                    <!-- Email -->
+                    <label for="customer-email">Email : </label><br>
+                    <input type="text" id="customer-email" name="email"><br>
+                    <!-- Phone -->
+                    <label for="customer-phone">Phone : </label><br>
+                    <input type="text" id="customer-phone" name="phone"><br>
+                    <!-- City -->
+                    <label for="customer-city">City : </label><br>
+                    <input type="text" id="customer-city" name="city"><br>
+                    <!-- Total pay -->
+                    <label for="customer-total-pay">Total pay :</label><br>
+                    <input type="text" id="customer-total-pay" name="total_pay"><br><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- Buttons -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="form-customer">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

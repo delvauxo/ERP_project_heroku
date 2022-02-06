@@ -1,16 +1,186 @@
 {
-  "posts":[
+  "products": [
     {
-      "id" : 0,
-      "title": "First post!",
-      "content" : "My first content!"
+      "id": 1,
+      "name": "Tomate",
+      "category": "vegetable",
+      "origin": "France",
+      "stock": "15",
+      "price_sell": "3",
+      "supplier": "delhaize",
+      "price_supplier": "1"
+    },
+    {
+      "id": 2,
+      "name": "Cerise",
+      "category": "fruit",
+      "origin": "Spain",
+      "stock": "5",
+      "price_sell": "9",
+      "supplier": "delhaize",
+      "price_supplier": "5"
+    },
+    {
+      "id": 3,
+      "name": "Peche",
+      "category": "fruit",
+      "origin": "Italy",
+      "stock": "16",
+      "price_sell": "5",
+      "supplier": "carrefour",
+      "price_supplier": "3"
+    },
+    {
+      "id": 4,
+      "name": "Banane",
+      "category": "fruit",
+      "origin": "Somalia",
+      "stock": "20",
+      "price_sell": "3",
+      "supplier": "Lidl",
+      "price_supplier": "2"
+    },
+    {
+      "id": 5,
+      "name": "Pomme",
+      "category": "fruit",
+      "origin": "Antarctica",
+      "stock": "20",
+      "price_sell": "3",
+      "supplier": "Carrefour",
+      "price_supplier": "2"
+    },
+    {
+      "id": 6,
+      "name": "Poire",
+      "category": "fruit",
+      "origin": "Belgium",
+      "stock": "20",
+      "price_sell": "4",
+      "supplier": "Lidl",
+      "price_supplier": "1"
+    },
+    {
+      "id": 7,
+      "name": "Fraise",
+      "category": "fruit",
+      "origin": "Spain",
+      "stock": "100",
+      "price_sell": "1",
+      "supplier": "Lidl",
+      "price_supplier": "0.5"
+    },
+    {
+      "id": 8,
+      "name": "Orange",
+      "category": "fruit",
+      "origin": "Greece",
+      "stock": "20",
+      "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "1"
+    },
+    {
+      "id": 9,
+      "name": "Prune",
+      "category": "fruit",
+      "origin": "Ireland",
+      "stock": "15",
+      "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "1"
+    },
+    {
+      "id": 10,
+      "name": "Carotte",
+      "category": "vegetable",
+      "origin": "Kazakhstan",
+      "stock": "20",
+      "price_sell": "3",
+      "supplier": "Carrefour",
+      "price_supplier": "1"
+    },
+    {
+      "id": 11,
+      "name": "Brocoli",
+      "category": "vegetable",
+      "origin": "Ukraine",
+      "stock": "40",
+      "price_sell": "4",
+      "supplier": "Carrefour",
+      "price_supplier": "2"
     }
   ],
-  "comments" : [
+  "customers": [
     {
-      "id": 0,
-      "content": "Wow such content!",
-      "username": "zero_cool"
+      "id": 1,
+      "first_name": "Olivier",
+      "last_name": "Delvaux",
+      "age": 34,
+      "email ": "delvauxo@outlook.com",
+      "tel": 487610422,
+      "addres": "Bruxelles",
+      "total_pay": 50
+    },
+    {
+      "id": 2,
+      "first_name": "Ayan",
+      "last_name": "Abdi",
+      "age": 32,
+      "email ": "yaniabdi@gmail.com",
+      "tel": 473178010,
+      "addres": "Leuven",
+      "total_pay": 55
+    },
+    {
+      "id": 3,
+      "first_name": "Guillaume",
+      "last_name": "Dutilleux",
+      "age": "28",
+      "email": "guish@gmail.com",
+      "phone": "478945657",
+      "city": "Etterbeek",
+      "total_pay": "124"
+    },
+    {
+      "id": 4,
+      "first_name": "Amandine",
+      "last_name": "Bataille",
+      "age": "33",
+      "email": "d.bataille@gmail.com",
+      "phone": "496485527",
+      "city": "Saint-Gilles",
+      "total_pay": "184"
+    }
+  ],
+  "suppliers": [
+    {
+      "id": 1,
+      "name": "Carrefour",
+      "city": "Charleroi",
+      "product_id": 1,
+      "total_purchases": 500
+    },
+    {
+      "id": 2,
+      "name": "Lidl",
+      "city": "Mons",
+      "product_id": 3,
+      "total_purchases": 100
+    },
+    {
+      "id": 3,
+      "name": "Bio Planet",
+      "city": "Forest",
+      "product_id": "2",
+      "total_purchases": "1000"
+    },
+    {
+      "id": 4,
+      "name": "Delhaize",
+      "city": "Bruxelles",
+      "product_id": "2",
+      "total_purchases": "724"
     }
   ]
 }

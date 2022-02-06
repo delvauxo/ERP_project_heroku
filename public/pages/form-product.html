@@ -1,0 +1,61 @@
+<!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">Add a new product</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form import -->
+                <form id="form-product" method="post" action="db.json">
+                    <!-- Id -->
+                    <input id="product-id" type="hidden" name="id">
+                    <!-- Name -->
+                    <div class="form-floating mb-3">
+                        <input type="text" id="product-name" class="form-control" name="name" placeholder="Name" required>
+                        <label for="product-name" class="form-label">Name</label>
+                    </div>
+                    <!-- Category -->
+                    <div class="form-floating mb-3">
+                        <select id="product-category" class="form-select" name="category" >
+                            <option value="fruit">Fruit</option>
+                            <option value="vegetable">Vegetable</option>
+                        </select>
+                        <label for="product-category" class="form-label">Category</label>
+                    </div>
+                    <!-- Origin -->
+                    <div class="form-floating mb-3">
+                        <select id="product-country" class="form-select" name="origin"></select>
+                        <label for="product-country" class="form-label">Origin</label>
+                    </div>
+                    <!-- Stock -->
+                    <div class="form-floating mb-3">
+                        <input id="product-stock" class="form-control" type="text" name="stock" placeholder="Stock">
+                        <label for="product-stock" class="form-label">Stock</label>
+                    </div>
+                    <!-- Price-sell -->
+                    <div class="form-floating mb-3">
+                        <input id="product-price-sell" class="form-control" type="text" name="price_sell" placeholder="Price sell">
+                        <label for="product-price-sell" class="form-label">Price sell</label>
+                    </div>
+                    <!-- Suppliers -->
+                    <div class="form-floating mb-3">
+                        <select id="product-supplier" class="form-select" name="supplier"></select>
+                        <label for="product-supplier" class="form-label">Supplier</label>
+                    </div>
+                    <!-- Price-supplier -->
+                    <div class="form-floating mb-3">
+                        <input id="product-price-supplier" class="form-control" type="text" name="price_supplier" placeholder="Price supplier">
+                        <label for="product-price-supplier" class="form-label">Price supplier</label>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- Buttons -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-dark" form="form-product">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

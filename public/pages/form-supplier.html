@@ -1,0 +1,38 @@
+<!-- Modal -->
+<div class="modal fade" id="supplierModal" tabindex="-1" aria-labelledby="supplierModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="supplierModalLabel">Add a new supplier :</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- Form import -->
+                <form id="form-supplier" method="post" action="db.json">
+                    <!-- Id -->
+                    <input id="supplier-id" type="hidden" name="id">
+                    <!-- Name -->
+                    <label for="supplier-name">Name : </label><br>
+                    <input type="text" id="supplier-name" name="name" required><br>
+                    <!-- City -->
+                    <label for="supplier-city">City :</label><br>
+                    <input type="text" id="supplier-city" name="city"><br>
+                    <!-- Product ID -->
+                    <label for="supplier-product-id">Product ID :</label><br>
+                    <select id="supplier-product-id" name="product_id">
+                        <option value="1">Pomme</option>
+                        <option value="2">Orange</option>
+                    </select><br>
+                    <!-- Total purchases -->
+                    <label for="supplier-total-purchases">Total purchases :</label><br>
+                    <input type="text" id="supplier-total-purchases" name="total_purchases"><br><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <!-- Buttons -->
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" form="form-supplier">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

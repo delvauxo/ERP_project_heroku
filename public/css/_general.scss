@@ -1,0 +1,56 @@
+// 
+// Navigation.
+// 
+
+body {
+    // Navbar fixed top height.
+    padding-top: 86px;
+}
+
+// Navbar.
+.navbar {
+
+    a.nav-link {
+        padding: .5rem 1rem !important;
+        
+        &:hover {
+            color: lighten($color: #BC1142, $amount: 20%) !important;
+        }
+    }
+}
+
+// Logo SVG colors.
+.st0 {
+    fill:#75A928;
+}
+
+.st1 {
+    fill:#BC1142;
+}
+
+// Navbar SVGs.
+symbol > path,
+.navbar path {
+    filter: invert(1);
+}
+
+// 
+// Listing.
+// 
+
+// Table.
+#listing {
+
+    table {
+
+        .listing-item-actions {
+            display: flex;
+            gap: 15px;
+
+            // Bootstrap class overriding.
+            .btn {
+                padding: .125rem 1rem;
+            }
+        }
+    }
+}
