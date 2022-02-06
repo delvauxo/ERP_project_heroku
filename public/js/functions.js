@@ -1,7 +1,7 @@
 // 
 // Global Variables.
 // 
-const domainName = 'https://erp-project-heroku.herokuapp.comz'
+const domainName = 'https://erp-project-heroku.herokuapp.com'
 
 /**
  * Function - Fetch datas.
