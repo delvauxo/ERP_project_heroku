@@ -117,8 +117,8 @@ const insertCustomer = async function(objectData) {
 */
 const editItem = function(arrayEditBtns) {
     // On edit button click.
+    console.log(arrayEditBtns)
     for (const btn of arrayEditBtns) {
-        console.log(arrayEditBtns)
         btn.addEventListener('click', async function(e) {
             console.log('edit clicked')
             // Get ID of item to delete.
