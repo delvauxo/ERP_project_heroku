@@ -142,6 +142,12 @@ const editItem = function(arrayEditBtns) {
                 })
             })
             console.log(response)
+            // Fetch new datas after item deleted.
+            const items  = await fetchDatas(domainName + '/' + page, {method: 'GET'})
+            // Reload listing with new data inserted after getting new listing with new product.
+            createTable(items, document.querySelector('#listing'))
+            // On delete button click.
+            deleteItem(document.querySelectorAll('#listing .listing-item-actions .btn-danger'))
         })
     }
 }
