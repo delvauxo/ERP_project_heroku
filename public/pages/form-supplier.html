@@ -12,17 +12,12 @@
                     <!-- Id -->
                     <input id="supplier-id" type="hidden" name="id">
                     <!-- Name -->
-                    <label for="supplier-name">Name : </label><br>
-                    <input type="text" id="supplier-name" name="name" required><br>
-                    <!-- City -->
+                    <div class="form-floating mb-3">
+                        <input type="text" id="supplier-name" class="form-control" name="name" placeholder="Name" required>
+                        <label for="supplier-name" class="form-label">Name</label>
+                    </div>
                     <label for="supplier-city">City :</label><br>
                     <input type="text" id="supplier-city" name="city"><br>
-                    <!-- Product ID -->
-                    <label for="supplier-product-id">Product ID :</label><br>
-                    <select id="supplier-product-id" name="product_id">
-                        <option value="1">Pomme</option>
-                        <option value="2">Orange</option>
-                    </select><br>
                     <!-- Total purchases -->
                     <label for="supplier-total-purchases">Total purchases :</label><br>
                     <input type="text" id="supplier-total-purchases" name="total_purchases"><br><br>
