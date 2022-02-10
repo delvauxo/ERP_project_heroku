@@ -7,7 +7,7 @@
       "origin": "France",
       "stock": "15",
       "price_sell": "3",
-      "supplier": "delhaize",
+      "supplier": "Delhaize",
       "price_supplier": "1"
     },
     {
@@ -17,7 +17,7 @@
       "origin": "Spain",
       "stock": "5",
       "price_sell": "9",
-      "supplier": "delhaize",
+      "supplier": "Delhaize",
       "price_supplier": "5"
     },
     {
@@ -27,7 +27,7 @@
       "origin": "Italy",
       "stock": "16",
       "price_sell": "5",
-      "supplier": "carrefour",
+      "supplier": "Carrefour",
       "price_supplier": "3"
     },
     {
@@ -94,20 +94,10 @@
       "id": 10,
       "name": "Carotte",
       "category": "vegetable",
-      "origin": "Kazakhstan",
-      "stock": "20",
-      "price_sell": "3",
-      "supplier": "Carrefour",
-      "price_supplier": "1"
-    },
-    {
-      "id": 11,
-      "name": "Brocoli",
-      "category": "vegetable",
-      "origin": "Ukraine",
-      "stock": "40",
-      "price_sell": "4",
-      "supplier": "Carrefour",
+      "origin": "Germany",
+      "stock": "50",
+      "price_sell": "3.5",
+      "supplier": "Lidl",
       "price_supplier": "2"
     }
   ],
@@ -116,21 +106,21 @@
       "id": 1,
       "first_name": "Olivier",
       "last_name": "Delvaux",
-      "age": 34,
-      "email ": "delvauxo@outlook.com",
-      "tel": 487610422,
-      "addres": "Bruxelles",
-      "total_pay": 50
+      "age": "34",
+      "email": "delvauxo@outlook.com",
+      "phone": "487610422",
+      "city": "Bruxelles",
+      "total_pay": "50"
     },
     {
       "id": 2,
       "first_name": "Ayan",
       "last_name": "Abdi",
-      "age": 32,
-      "email ": "yaniabdi@gmail.com",
-      "tel": 473178010,
-      "addres": "Leuven",
-      "total_pay": 55
+      "age": "32",
+      "email": "yaniabdi@gmail.com",
+      "phone": "473178010",
+      "city": "Leuven",
+      "total_pay": "55"
     },
     {
       "id": 3,
@@ -158,15 +148,15 @@
       "id": 1,
       "name": "Carrefour",
       "city": "Charleroi",
-      "product_id": 1,
-      "total_purchases": 500
+      "product_id": "1",
+      "total_purchases": "500"
     },
     {
       "id": 2,
       "name": "Lidl",
       "city": "Mons",
-      "product_id": 3,
-      "total_purchases": 100
+      "product_id": "1",
+      "total_purchases": "100"
     },
     {
       "id": 3,
